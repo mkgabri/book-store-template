@@ -1,0 +1,41 @@
+//- header.pug  header component
+header
+  .container-fluid.p-0
+    nav.navbar.navbar-expand-lg.navbar-dark
+      a.navbar-brand(href='#')
+        i.fas.fa-book-reader.fa-3x.mx-3
+        | Books
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNavAltMarkup.collapse.navbar-collapse
+        .mr-auto
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link.active(href='#')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') Course
+          li.nav-item
+            a.nav-link(href='#') Price
+          li.nav-item
+            a.nav-link(href='#') Pages
+            ul.dropdown
+              li.nav-item
+                a.nav-link(href='#') Generic
+              li.nav-item
+                a.nav-link(href='#') Elemwnt
+          li.nav-item
+            a.nav-link(href='#') About
+  .container.text-center
+    .row
+      .col-md-7.col-sm-12
+        h6 AUTHOR: Gabriel Carrasco
+        h1 FOCUSED FRONTEND
+        p Soy un prometente desarrollador frontend tendiente al UX/UI Design
+        button.btn.btn-light.px-5.py-2 By now for $5.99
+      .col-md-5.col-sm-12.h-25
+        .image
+          img(src="./src/images/header-img.png" alt="Books")
+
+    

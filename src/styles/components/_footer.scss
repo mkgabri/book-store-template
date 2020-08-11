@@ -1,0 +1,68 @@
+footer {
+  background: var(--bg-footer);
+  overflow-x: hidden;
+  padding: 14vmin 18vmin;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  @include from(m) {
+    padding: 8vmin 10vmin;
+  }
+  .about-us, .newsletter, .follow {
+    grid-column: 1/ span 12;
+  }
+  
+  .about-us {
+    @include from(m) {
+      grid-column: span 5;
+    }
+    @include from(m) {
+      grid-column: span 4;
+    }
+    p {
+      color: var(--t-muted);
+      span {
+        color: var(--tomato-dark-orange);
+      }
+    }
+  }
+  .newsletter {
+    margin-bottom: 8vmin;
+    @include from(m) {
+      grid-column: span 5;
+    }
+    @include from(l) {
+      grid-column: 6/ span 5;
+    }
+    form {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      .input-group {
+        padding-right: 3rem;
+        &-icon {
+          background: var(--bggradient);
+          border: none;
+          padding: 0 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--t-muted);
+        }
+        input {
+          border: none;
+        }
+      }
+    }
+  }
+  .follow {
+    @include from(m) {
+      grid-column: span 2;
+    }
+    .column {
+      i {
+        color: var(--icon-colors);
+        padding-right: .5em;
+      }
+    }
+  }
+}

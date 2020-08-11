@@ -1,0 +1,91 @@
+header {
+  background: var(--bggradient);
+  nav {
+    z-index: var(--z-normal);
+    a {
+      font-family: var(--Snigle-font);
+      font-size: .9rem; // la classe navbar la sovrascrive
+      color: whitesmoke;
+    }
+  }
+  .navbar-nav {
+    .nav-item:hover {
+      .dropdown {
+        display: block;
+        .nav-link {
+          color: var(--t-black);
+          &:hover {
+            background: whitesmoke;
+          }
+        }
+      }
+    }
+  }
+  .dropdown {
+    position: absolute;
+    display: none;
+    background: var(--bg-white);
+    min-width: 30vmin;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.2);
+    border-radius: 2px;
+    li {
+      a {
+        color: initial;
+      }
+    }
+  }
+  .nav-item {
+    padding: .9em;
+    &:last-child {
+      padding-right: 10.5em;
+    }
+  }
+  .navbar-brand {
+    padding-left: 8rem;
+    @include to(m) {
+      padding-left: 1rem;
+    }
+  }
+  .nav-link:hover {
+    color: var(--t-black);
+  }
+  
+  .row {
+    .col-md-5 {
+      img {
+        width: 90%;
+      }
+    }
+    .col-md-7 {
+      padding: 22vmin 1vmin;
+      padding-bottom: 35vmin;
+      font-family: var(--Rubik);
+      color: var(--t-white);
+      h6 {
+        padding: 1vmin;
+        letter-spacing: 4px;
+      }
+      h1 {
+        font-weight: bold;
+        padding: .1em 0;
+        @include from(l) {
+          font-size: 8vmin;
+        }
+      }
+      p {
+        padding: 1vmin 5vim;
+      }
+      button {
+        border-radius: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0, .815);
+    z-index: var(--z-fixed);
+  }
+}

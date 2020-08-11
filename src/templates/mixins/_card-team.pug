@@ -1,0 +1,10 @@
+mixin cardTeam(title, image, text)
+  //.col-md-4.col-12.text-center
+  .card
+    .card-img-top(style=`background: url("./src/images/${image}") center/cover no-repeat;`)
+      //img(src="./src/images/"+ image alt="Menber").img-fliud.rounded-circle.p-4
+    .card-body
+      h3= title
+      p.card-text= text
+      a(href="#").text-secondary.text-decoration-none GoSomewhere
+      p.text-black-50 CEO at Google

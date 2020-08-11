@@ -1,0 +1,76 @@
+include ../mixins/_rect.pug
+include ../mixins/_card.pug
+include ../mixins/_card-team.pug
+
+-
+  var team = [
+    {
+      title: 'Black Jolene',
+      image: 'UI-face-1.jpg',
+      text: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      title: 'Allen Agnes',
+      image: 'UI-face-4.jpg',
+      text: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      title: 'Olivia Louis',
+      image: 'UI-face-5.jpg',
+      text: 'Lorem ipsum dolor sit amet'
+    }
+  ]
+
+main
+  section.section-1
+      .contenedor
+        .image
+          img(src="./src/images/pexels-photo-1904769.jpeg" alt="Pray")
+        .panel
+          .panel-content
+            .panel-text
+              h1 Mr. Devid Smith
+              p.pt-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a vestibulum urna, vitae bibendum urna. 
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a vestibulum urna, vitae bibendum urna. Curabitur a scelerisque mauris. Phasellus hendrerit nisl scelerisque nisl tristique, at blandit felis lacinia
+  section.section-2
+    .cover
+      h1 Some Feature That Made Us Unique
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a vestibulum
+    .numbers
+      +rect('2345', 'Happy Client')
+      +rect('6784', 'Cups Coffee')
+      +rect('3241', 'Little restaurant')
+      +rect('4349', 'Total Projects')
+    .purchase
+      h1  Purchase Whatever You Want
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      .cards
+        .d-flex.flex-row.justify-content-center.flex-wrap
+          +card('PDF', 'With supporting text below as a naturel lead-in', '$99.90')
+          +card('E-book', 'With supporting text below as a naturel lead-in', '$89.90')
+          +card('Print Copy', 'With supporting text below as a naturel lead-in', '$58.60')
+      
+  section.section-3
+    .downloads
+      .info
+        h1 Download Our App For All Platforms
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a vestibulum urna, vitae bibendum urna. Curabitur a scelerisque mauris. Phasellus hendrerit nisl scelerisque nisl tristique, at blandit felis lacinia
+      .links-download
+        .app
+          i.fas.fa-desktop.fa-3x
+          .text
+            h3 Desktop
+            p On Website
+        .app
+          i.fas.fa-mobile-alt.fa-3x
+          .text
+            h3 On Mobile
+            p On Play Store
+  
+  section.section-4
+    .contenedor
+      h1.text-center What our Reader's Say About us
+      p.text-secondary Loren ipsum dolor sit amet.
+    .team
+      each guy in team
+        +cardTeam(guy.title, guy.image, guy.text)

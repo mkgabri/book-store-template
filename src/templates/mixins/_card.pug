@@ -1,0 +1,9 @@
+mixin card(title, text, price)
+  .card
+    .card-body
+      .title
+        h5.card-title= title
+      p.card-text= text
+      .pricing
+        h1= price
+        a(href="#").btn.btn-dark.px-5.py-2.mt-2.mb-5 Purchase Now

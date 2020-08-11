@@ -1,0 +1,265 @@
+main {
+  .section-1 {
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      margin: 20vmin auto;
+      @include from(m) {
+        flex-direction: row;
+        margin: 20vmin 5vmin;
+      }
+      .image {
+        text-align: center; 
+        @include from (l) {
+          width: 40%;
+        }
+        img {
+          opacity: .8;
+          width: 80%;
+          border-radius: .2em;
+        }
+      }
+      .panel {
+        position: relative;
+        @include from (l) {
+          width: 55%;
+        }
+      }
+      .panel-content {
+        margin: 0 1.5em;
+        padding: 4em 3.5em 2.5em;
+        box-shadow: 0 25px 42px rgba(0, 0, 0, 0.2);
+        font-family: var(--Rubik);
+        @include from(m) {
+          margin: 0;
+          padding: 1em 2.5em 2em;
+        }
+        @include from(l) {
+              position: absolute;
+              top: 10vmin;
+              left: -18vmin;
+              background: var(--bg-white);
+              border-radius: 3px;
+              padding: 13vmin 5vmin 23vmin 10vmin;
+              box-shadow: 0 25px 42px rgba(0, 0, 0, 0.2);
+              font-family: var(--Rubik);
+              z-index: 1;
+        }
+        h1 {
+          font-weight: bold;
+          padding: .4em 0;
+        }
+        p {
+          font-size: .9em;
+          color: var(--t-light-black);
+        }
+      }
+    }
+  }
+  .section-2 {
+    .cover {
+      width: 100%;
+      height: 55vmin;
+      background: url("../images/pexels-photo-452738.jpeg") center/cover no-repeat;
+      position: relative;
+      padding-top: 19vmin;
+      text-align: center;
+      background-position: -24rem -19rem;
+      background-size: 150%;
+      h1 {
+        font-family: var(--Patua);
+        font-size: 1.9em;
+        color: var(--t-smoke);
+        @include from(l) {
+          font-size: 6vmin;
+        }
+      }
+      p {
+        font-family: var(--Rubik);
+        font-size: .9em;
+        color: var(--t-ghost);
+      }
+    }
+    .numbers {
+      margin-top: -15vmin;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .rect {
+        position: relative;
+        background: var(--bg-white);
+        text-align: center;
+        width: 10rem;
+        height: 8rem;
+        padding-top: 3.5vmin;
+        margin: 1rem;
+        border-radius: .5rem;
+        box-shadow: 1px 2px 50px 0 rgba(255,0,0,.349);
+        @include from(l) {
+          width: 17rem;
+          height: 12rem;
+        }
+        h1 {
+          font-size: 2em;
+          color: var(--tomato-orange);
+          @include from(l) {
+            font-size: 5em;
+          }
+        }
+        p {
+          font-family: var(--Patua);
+        }
+      }
+    }
+    .purchase {
+      text-align: center;
+      >h1 {
+        padding-top: 15vmin;
+        padding-bottom: .1em;
+        font-family: var(--Lobster);
+      }
+      >p {
+        color: var(--light-black);
+        font-size: 3vmin;
+        padding-bottom: 10vmin;
+      }
+      .cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card {
+          width: 22rem;
+          margin: 3vmin;
+          &-body {
+            .title {
+              background: rgba(208,241,241, .1);
+              padding: 1.4rem 2.5rem;
+              font-size: 2vmin;
+            }
+            .pricing {
+              background: rgba(280, 241, 241, .1);
+              border-bottom-right-radius: 170px;
+              border-bottom-left-radius: 170px;
+              >h1 {
+                font-size: 10vmin;
+
+              }
+            }
+          }
+          &-text {
+            padding: 2.5rem 3rem;
+            color: var(--light-black);
+          }
+        }
+      }
+      div {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  .section-3 {
+    margin-top: 15vmin;
+    background: var(--bggradient);
+    padding: 10vmin;
+    .downloads {
+      text-align: center;
+      .info {
+        >h1 {
+          padding: 6vmin 4vmin;
+          color: whitesmoke;
+          font-size: 6vmin;  
+        }
+        >p {
+          padding: 0 4em 2em;
+          color: var(--light-gray);
+          font-size: 3vmin;
+        }
+      }
+      .links-download {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include from(m) {
+          flex-direction: row;
+          justify-content: space-around;;
+        }
+        .app {
+          background: var(--bg-white);
+          border-radius: 3em;
+          padding: 2vmin 4.5vmin;
+          margin: 1em;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 50%;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          @include from(m) {
+            padding: 1.5vmin 4vmin;
+            width: 30%;
+          }
+          i {
+            font-size: 8vmin;
+          }
+          h3 {
+            font-size: 4vmin;
+            padding-top: .35em;
+            margin: 0;
+          }
+          p {
+            font-size: 2vmin
+          }
+        }
+      }
+    }
+  }
+  .section-4 {
+    padding: 4vmin 0;
+    .contenedor {
+      text-align: center;
+      h1 {
+        font-size: 6vmin;
+        padding-top: 14vmin;
+      }
+    }
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      margin-bottom: 10vmin;
+      .card {
+        margin-top: 10vmin;
+        display: inline-block;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        text-align: center;
+        @include from(m) {
+          margin-right: 8.5rem;
+          margin-left: 8.5rem;
+        }
+        &-text {
+          padding: .5em;
+        }
+        &-body {
+          >a {
+            font-size: 1.5em;
+          }
+        }
+        &-img-top {
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          margin: 16px auto 0;
+          height: 8em;
+          width: 8em;
+          border-radius: 50%;
+          margin: 5vmin auto 0;
+        }
+      }
+    }
+  }
+}
+
+
