@@ -30,3 +30,7 @@ Plugins utiles para el desarrollo con bootstrap y jquery
 ```bash
 npm i bootstrap jquery popper.js
 ```
+
+
+## Fuente
+Como ejemplo tome el canal de youtube **Daily tuition** y el video : https://github.com/mkgabri/book-store-template.git
